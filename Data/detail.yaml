@@ -1,0 +1,43 @@
+goto_miniplayer:
+  - action: wait_till_see
+    by: xpath
+    value: "//*[@text='试听']"
+  - action: click
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/headerPlayBtn']"
+goto_player:
+  - action: click
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/miniBarGroup']"
+miniplayer_play_status:
+  - action: if_exist
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/miniBarGroup']"
+get_miniplayer_title:
+  - action: get_text
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/tvAudioTitle']"
+get_miniplayer_subtitle:
+  - action: if_exist
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/tvAudioSubTitle']"
+get_miniplayer_pic:
+  - action: if_exist
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/ivAudioPic']"
+get_miniplayer_progressview:
+  - action: if_exist
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/pvProgressView']"
+get_miniplayer_play_icon:
+  - action: if_exist
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/ivPlayerIcon']"
+get_miniplayer_close:
+  - action: if_exist
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/ivAudioClose']"
+back_to_previous:
+  - action: click
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/backButton']"

@@ -1,0 +1,222 @@
+minimize:
+  - action: click
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/ivBack']"
+get_miniplayer:
+  - action: if_exist
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/miniBarGroup']"
+get_title:
+  - action: get_text
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/tvTitle"]'
+get_trial_icon:
+  - action: if_exist
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/tvTryListen"]'
+get_pic:
+  - action: if_exist
+    by: xpath
+    value: '//*[@class="android.widget.FrameLayout"]'
+get_slide:
+  - action: if_exist
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/pptRecyclerView"]'
+slide_pic_to_left:
+  - action: swipe
+    by: xpath
+    start_x: 0.6
+    start_y: 0.3
+    end_x: 0.3
+    end_y: 0.3
+slide_pic_to_right:
+  - action: swipe
+    by: xpath
+    start_x: 0.3
+    start_y: 0.3
+    end_x: 0.6
+    end_y: 0.3
+get_slide_num:
+  - action: get_num_text
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/tvIndex"]'
+get_slide_page_info:
+  - action: if_exist
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/tvIndex"]'
+set_time_counter_15:
+  - action: click
+    by: xpath
+    value: '//*[@text="15分钟"]'
+get_time_counter_text:
+  - action: get_text
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/tvTimer"]'
+set_speed:
+  - action: click
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/ivSpeed"]'
+  - action: click
+    by: xpath
+    value: '//*[@text="${speed}"]'
+get_speed_text:
+  - action: click
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/tvSpeed"]'
+download:
+  - action: click
+    by: xpath
+    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+download_tip_for_nonvip:
+  - action: get_text
+    by: xpath
+    value: '//*[@class="android.widget.Toast"]'
+goto_share:
+  - action: click
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/ivRedPacket"]'
+share_title_desc:
+  - action: get_text
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/title"]'
+share_subtitle_desc:
+  - action: get_text
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/tip"]'
+share_cancel:
+  - action: click
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/btnCancel"]'
+share_moments:
+  - action: click
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/ivWX"]'
+  - action: click
+    by: xpath
+    value: '//*[@resource-id="com.tencent.mm:id/c55"]'
+  - action: sendkeys
+    by: xpath
+    value: '//*[@resource-id="com.tencent.mm:id/bhn"]'
+    text: 'lucia'
+  - action: click
+    by: xpath
+    value: '//*[@resource-id="com.tencent.mm:id/gbv" and @text="lucia"]'
+  - action: click
+    by: xpath
+    value: '//*[@text="分享"]'
+share_moments_status:
+  - action: if_exist
+    by: xpath
+    value: '//*[@resource-id="com.tencent.mm:id/ayl"]'
+back_to_young_win:
+  - action: click
+    by: xpath
+    value: '//*[@text="返回少年得到"]'
+#share_friend(self):
+#  - action: if_exist
+#    by: xpath
+#    value: '//*[@resource-id="com.dedao.juvenile:id/ivPYQ"]'
+#share_qq(self):
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#share_qqzone(self):
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_timeline:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_playhead:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_progress:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#tap_on_timeline:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#drag_playhead:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_start_time:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_end_time:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_playlist:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#switch_program:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#go_previous:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#go_next:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#pause:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_document:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_series_pic:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_series_title:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_series_learners:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#goto_buy:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#goto_leave_msg:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#goto_top_msg:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#add_favourite:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_msg_eles:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#msg_thumb_up:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#scroll_to_bottom:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'
+#get_mini_controller:
+#  - action: click
+#    by: xpath
+#    value: '//*[@text="${search_code}"]/../../..//*[@text="加自选"]'

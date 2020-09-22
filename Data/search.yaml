@@ -1,0 +1,24 @@
+query:
+  - action: sendkeys
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/etSearchInput']"
+    text: ${search_name}
+  - action: keycode
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/etSearchInput']"
+    text: 66
+  - action: wait_till_clickable
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/tvTitle']"
+goto_detail:
+  - action: click
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/tvTitle' and @index=1]"
+goto_player:
+  - action: click
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/miniBarGroup"]'
+cancel:
+  - action: click
+    by: xpath
+    value: '//*[@resource-id="com.dedao.juvenile:id/tvCancel"]'

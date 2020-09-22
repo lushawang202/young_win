@@ -1,0 +1,4 @@
+goto_search:
+  - action: click
+    by: xpath
+    value: "//*[@resource-id='com.dedao.juvenile:id/searchView']"
