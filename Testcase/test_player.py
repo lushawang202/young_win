@@ -1,7 +1,7 @@
 import allure
 import pytest
 from time import sleep
-from young_win.Page.App import App
+from Page.App import App
 
 
 class TestPlayer:

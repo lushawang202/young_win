@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import pytest
 
-from young_win.Page.App import App
+from Page.App import App
 
 
 class TestMiniplayer:
